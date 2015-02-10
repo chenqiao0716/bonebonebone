@@ -13,3 +13,6 @@ Utils =
         return to
       else
         throw new TypeError('Cannot convert first argument to object')
+
+
+module.exports = Utils
