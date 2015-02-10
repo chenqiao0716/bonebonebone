@@ -24,6 +24,15 @@ class Model
     'regexp': (value, reg_str, flag='')->
       new RegExp(reg_str, flag).test value.toString()
 
+  @_defaultOptions:
+    # 规定哪些属性改变时会触发change:attributeName事件
+    observers: []
+    # 自定义属性的访问方式
+    setters: {}
+    getters: {}
+    # 自定义属性的校验方式
+    validates: {}
+
 
   # 类的私有方法
   @_validate: (validate_str, value)->
@@ -37,6 +46,8 @@ class Model
         when 'regexp'
           _params = validate_param.split(' ')
           _result = @_defaultValidations[validate_key](value, _params[0], _params[1])
+        else
+          _result = @_defaultValidations[validate_key](value)
     else
       _result = @_defaultValidations[validate_str](value)
     _result
@@ -49,14 +60,6 @@ class Model
 
 
   # 实例属性
-  _defaultOptions:
-    # 规定哪些属性改变时会触发change:attributeName事件
-    observers: []
-    # 自定义属性的访问方式
-    setters: {}
-    getters: {}
-    # 自定义属性的校验方式
-    validates: {}
 
 
   # 实例的public方法
@@ -76,7 +79,7 @@ class Model
       return @constructor._validate(validate, value)
 
   _init: (obj, options)->
-    options = Util.$extend({}, @_defaultOptions, options)
+    options = Util.$extend({}, @constructor._defaultOptions, options)
     # 将原始数据存在_data中
     @_data = @$parse(obj, options)
     @_errorObj = {}
