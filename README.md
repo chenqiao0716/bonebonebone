@@ -1,9 +1,9 @@
 # bonebonebone
 
 ### 模块:
-* Events : 提供事件驱动的机制
+* [Events](https://github.com/moonRider/bonebonebone/tree/develop/api_document/event) : 提供事件驱动的机制
 * Utils: 提供工具函数
-* Model: 核心模块之一, 用于构建模型
+* [Model](https://github.com/moonRider/bonebonebone/tree/develop/api_document/model): 核心模块之一, 用于构建模型
 * Collection: 核心模块之一, 用于处理模型集合
 * View: 用于处理视图
 * Ajax: 提供和server交互的restful的Api
