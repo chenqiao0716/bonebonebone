@@ -41,7 +41,7 @@
 
 * getters
 
-    同setters，区别在于这里定义的是取值是的方法
+    同setters，区别在于这里定义的是取值时的方法
 
 * validates
 
