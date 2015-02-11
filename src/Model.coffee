@@ -58,9 +58,6 @@ class Model
     @_init(obj, options)
 
 
-  # 实例属性
-
-
   # 实例的public方法
   $parse: (obj, options)->
     obj
@@ -97,6 +94,8 @@ class Model
           @_data[key] = if _setter? then _setter(newValue) else newValue
           if _observed
             @$fire("change:#{key}", @_data[key])
+        else
+          @$fire("error:#{key}", newValue) if _observed
         @_data[key]
       get: ->
         _getter = options.getters[key]
