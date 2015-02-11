@@ -68,7 +68,7 @@
 
 判断一个实例是否是新建的(根据id属性判断)
 
-    model.isNew()
+    model.$isNew()
 
 
 #### $parse
