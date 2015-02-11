@@ -21,9 +21,6 @@ class Collection
 
   constructor: (sets, options)->
     @_init sets, options
-    @$init sets, options
-
-  $init: ->
 
   $add: (model)->
     if model instanceof @model

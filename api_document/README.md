@@ -4,7 +4,7 @@
 * [Events](event) : 提供事件驱动的机制
 * [Utils](util): 提供工具函数
 * [Model](model): 核心模块之一, 用于构建模型
-* Collection: 核心模块之一, 用于处理模型集合
+* [Collection](collection): 核心模块之一, 用于处理模型集合
 * View: 用于处理视图
 * Ajax: 提供和server交互的restful的Api
 
