@@ -55,8 +55,7 @@ class Model
 
   # 构造函数
   constructor: (obj, options)->
-    @_init()
-    @_setProperties(obj, options)
+    @_init(obj, options)
 
 
   # 实例属性
@@ -82,10 +81,12 @@ class Model
     options = Util.$extend({}, @constructor._defaultOptions, options)
     # 将原始数据存在_data中
     @_data = @$parse(obj, options)
+    @_setProperties(obj, options)
     @_errorObj = {}
 
   _setProperty: (key, options)->
     Object.defineProperty @, key, {
+      enumerable: false
       set: (newValue)->
         _setter = options.setters[key]
         _observed = options.observers.some (item)->
@@ -105,7 +106,7 @@ class Model
 
   _setProperties: (obj, options)->
     for k, v of obj
-      @_setProperty(k)
+      @_setProperty(k, options)
 
 Util.$extend(Model.prototype, Event)
 
