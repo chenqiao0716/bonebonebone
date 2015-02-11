@@ -28,13 +28,16 @@ class Collection
   $add: (model)->
     if model instanceof @model
       @$models.push model
+      _result = model
     else
-      @_createModel model
-    @$fire 'add', {@$models[@$models.length-1]}
+      _result = @_createModel model
+    @$fire 'add', _result
+    _result
 
   $reset: (sets)->
     @_setModels sets
     @$fire 'reset'
+    @
 
   _init: (sets, options)->
     @_options = options
@@ -54,6 +57,7 @@ class Collection
   _createModel: (model)->
     _newmodel = new @model model, @_options
     @$models.push _newmodel
+    _newmodel
 
   _setModels: (sets)->
     @$models = []
