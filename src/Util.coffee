@@ -14,5 +14,6 @@ Utils =
       else
         throw new TypeError('Cannot convert first argument to object')
 
+  $idGenerator: (prefix='', suffix='')->
 
 module.exports = Utils
