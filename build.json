@@ -1,0 +1,27 @@
+{
+  "name": "Bonebonebone",
+  "Models": {
+    "Util": {
+      "requires": [],
+      "exports": "Util"
+    },
+    "Event": {
+      "requires": ["Util"],
+      "exports": "Event"
+    },
+    "Model": {
+      "requires": ["Util", "Event"],
+      "exports": "Model"
+    },
+    "Collection": {
+      "requires": ["Util", "Event", "Model"],
+      "exports": "Collection"
+    }
+  },
+  "SourcesDir": "src/",
+  "NodeDir": "api_document",
+  "NodeConcatOutput": "Bone3-node.coffee",
+  "Orders": ["Util", "Event", "Model", "Collection"],
+  "JsOutFile": "Bone3.js",
+  "CoffeeOutFile": "Bone3.coffee"
+}

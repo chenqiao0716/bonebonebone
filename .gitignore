@@ -1,1 +1,3 @@
 test.coffee
+
+api_document/*/*.coffee
