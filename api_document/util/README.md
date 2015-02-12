@@ -23,5 +23,26 @@
     必须的选项，至少含有一个对象，多个对象用逗号隔开，同一属性靠后的覆盖靠前的
 
 
+### $idGenerator id生成器
+
+    Util.$extend(prefix, suffix)
+
+#### params
+* prefix
+
+    生成id应该带有的前缀
+
+    string: 任何有效的字符串
+
+    可选参数, 默认为空字符
+
+* suffix
+
+    生成id应该带有的后缀
+
+    string: 任何有效的字符串
+
+    可选参数, 默认为空字符，需要先有prefix参数
+
 
 ## 更多方法正在加入中，请稍等

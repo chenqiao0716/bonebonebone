@@ -14,5 +14,15 @@ Utils =
       else
         throw new TypeError('Cannot convert first argument to object')
 
+  $idGenerator: (prefix='', suffix='')->
+    _id = Utils._idGenerator()
+    "#{prefix}#{_id}#{suffix}"
+
+  _idGenerator: (->
+    inner_id = 0
+    add = ->
+      inner_id += 1
+    return add
+  )()
 
 module.exports = Utils
