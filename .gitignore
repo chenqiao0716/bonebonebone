@@ -1,3 +1,5 @@
 test.coffee
+Bone3.coffee
+Bone3.js
 
-api_document/*/*.coffee
+api_document/**/*.coffee

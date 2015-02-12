@@ -18,10 +18,9 @@
       "exports": "Collection"
     }
   },
-  "SourcesDir": "src/",
+  "SourcesDir": "src",
   "NodeDir": "api_document",
-  "NodeConcatOutput": "Bone3-node.coffee",
+  "NodeConcatOutput": "Bone3",
   "Orders": ["Util", "Event", "Model", "Collection"],
-  "JsOutFile": "Bone3.js",
-  "CoffeeOutFile": "Bone3.coffee"
+  "CoffeeOutFile": "Bone3"
 }
