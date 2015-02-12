@@ -1,6 +1,4 @@
-Utils = require './Util.coffee'
-
-Events =
+Event =
   $on: (eventType, handle, context)->
     @_listeners ?= {}
     context ?= @
@@ -39,5 +37,3 @@ Events =
       else
         @_listeners[eventType] = @_listeners[eventType].filter (_handle)->
           _handle.func isnt handle
-
-module.exports = Events

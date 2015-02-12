@@ -1,6 +1,3 @@
-Util = require './Util.coffee'
-Event = require './Event.coffee'
-
 class Model
   # 类的属性
   @_defaultValidations:
@@ -108,5 +105,3 @@ class Model
       @_setProperty(k, options)
 
 Util.$extend(Model.prototype, Event)
-
-module.exports = Model

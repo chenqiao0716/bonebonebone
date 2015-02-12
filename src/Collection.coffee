@@ -1,7 +1,3 @@
-Util = require './Util.coffee'
-Event = require './Event.coffee'
-Model = require './Model.coffee'
-
 ###
 * a = [{name: 'hehe', id: 2}, {name: 'heihei', id: 1}]
 *
@@ -62,5 +58,3 @@ class Collection
       @_createModel model
 
 Util.$extend Collection.prototype, Event
-
-module.exports = Collection

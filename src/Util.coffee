@@ -1,4 +1,4 @@
-Utils =
+Util =
   $extend: (target, sources...)->
     if Object.assign
       return Object.assign.apply(Object, arguments)
@@ -24,5 +24,3 @@ Utils =
       inner_id += 1
     return add
   )()
-
-module.exports = Utils
