@@ -1,17 +1,3 @@
-###
-* a = [{name: 'hehe', id: 2}, {name: 'heihei', id: 1}]
-*
-* =====>>>>
-*
-* {
-*   length: 2
-*   $models: a.map (item)-> new Model(item, options)
-*   $reset: ->
-*   $add: ->
-*   ...
-* }
-*
-###
 class Collection
   model: Model
 
