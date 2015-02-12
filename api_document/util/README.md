@@ -23,7 +23,7 @@
     必须的选项，至少含有一个对象，多个对象用逗号隔开，同一属性靠后的覆盖靠前的
 
 
-### $idGenerator id生成器（待实现）
+### $idGenerator id生成器
 
     Util.$extend(prefix, suffix)
 
