@@ -3,8 +3,10 @@
 
 ### $extend 合并对象
 
-    Util.$extend(target, source...)
+    Util.$extend(target, source...) 
+### $merge 合并对象 建议使用merge命名，extend用于函数的继承或者扩展
 
+    Util.$merge(target, source...)
 #### params
 * target
 
